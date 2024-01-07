@@ -1,5 +1,5 @@
 import { Router } from "express";
-import * as authController from "../v1/auth.router.js";
+import * as authController from "../../controllers/auth.controller.js";
 
 /**
  * Initializations
@@ -21,9 +21,7 @@ const router = Router();
  *     "lastname": "Doe"
  *   }
  */
-router.post("/login", (req, res) => {
-  authController.login;
-});
+router.post("/login", authController.login);
 
 /**
  * @api {post} /api/auth/register User sign in
@@ -40,9 +38,7 @@ router.post("/login", (req, res) => {
  *     "lastname": "Doe"
  *   }
  */
-router.post("/register", (req, res) => {
-  authController.register;
-});
+router.post("/register", authController.register);
 
 /**
  * Router export
