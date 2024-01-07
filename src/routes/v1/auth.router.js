@@ -21,7 +21,9 @@ const router = Router();
  *     "lastname": "Doe"
  *   }
  */
-router.post("/login", authController.login);
+router.post("/login", (req, res) => {
+  authController.login;
+});
 
 /**
  * @api {post} /api/auth/register User sign in
@@ -38,7 +40,9 @@ router.post("/login", authController.login);
  *     "lastname": "Doe"
  *   }
  */
-router.post("/register", authController.register);
+router.post("/register", (req, res) => {
+  authController.register;
+});
 
 /**
  * Router export

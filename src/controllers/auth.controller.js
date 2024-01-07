@@ -2,6 +2,7 @@ import * as authService from "../services/auth.service.js";
 
 export const login = (req, res) => {
   const loginRes = authService.login();
+  console.log(loginRes);
   return res.status(200).json(loginRes);
 };
 
