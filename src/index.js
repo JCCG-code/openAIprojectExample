@@ -3,6 +3,11 @@ import mongoose from "mongoose";
 import "dotenv/config";
 
 /**
+ * Local imports
+ */
+import v1AuthRouter from "./routes/v1/auth.router.js";
+
+/**
  * Initializations
  */
 const app = express();
@@ -13,6 +18,11 @@ const port = process.env.PORT || 3001;
  */
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+/**
+ * API routes
+ */
+app.use("/api/v1/auth", v1AuthRouter);
 
 /**
  * Server and database are listening
